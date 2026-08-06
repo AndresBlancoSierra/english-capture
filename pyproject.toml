@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "english-capture"
+version = "0.1.0"
+description = "Global text capture system for learning English via screenshots + OCR"
+requires-python = ">=3.12"
+license = "MIT"
+
+dependencies = [
+    "pillow",
+    "pytesseract",
+    "evdev",
+    "pygobject",
+    "pycairo",
+]
+
+[project.scripts]
+english-capture = "english_capture.cli:main"
